@@ -1,0 +1,17 @@
+{% load i18n %}
+{% if previous.answers %}
+
+{% if user_was_incorrect %}
+<div class="alert alert-error">
+	<strong>{% trans "You answered the above question incorrectly" %}</strong>
+	<button class="btn btn-danger">Try Again Next Time.</button>
+</div>
+{%else%}
+<div class="alert alert-success">
+	<strong>{% trans "You answered the above question correctly" %}</strong>
+	<button class="btn btn-success">Apply For Job</button>
+</div>
+
+{% endif %}
+{% endif %}
+
